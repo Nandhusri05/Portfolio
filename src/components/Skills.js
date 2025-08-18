@@ -1,62 +1,87 @@
 import React from "react";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaGithub,
-} from "react-icons/fa";
-import { SiTailwindcss, SiMongodb } from "react-icons/si";
-
-const skillsData = [
-  { name: "HTML", icon: <FaHtml5 className="inline mr-2 text-orange-500" /> },
-  { name: "CSS", icon: <FaCss3Alt className="inline mr-2 text-blue-500" /> },
-  {
-    name: "JavaScript",
-    icon: <FaJsSquare className="inline mr-2 text-yellow-400" />,
-  },
-  { name: "React.js", icon: <FaReact className="inline mr-2 text-blue-400" /> },
-  {
-    name: "Node.js",
-    icon: <FaNodeJs className="inline mr-2 text-green-600" />,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss className="inline mr-2 text-teal-400" />,
-  },
-  {
-    name: "MongoDB",
-    icon: <SiMongodb className="inline mr-2 text-green-600" />,
-  },
-  {
-    name: "Git & GitHub",
-    icon: (
-      <>
-        <FaGitAlt className="inline mr-1 text-red-500" />
-        <FaGithub className="inline mr-2 text-gray-200" />
-      </>
-    ),
-  },
-];
+import { SiOracle } from "react-icons/si";
+import { FaLaptopCode } from "react-icons/fa";
+import { SiGoogleclassroom } from "react-icons/si";
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20 px-6 bg-[#1E1E1E]">
-      <h2 className="text-3xl font-bold mb-8 text-center text-white">Skills</h2>
-      <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-        {skillsData.map(({ name, icon }) => (
-          <span
-            key={name}
-            className="flex items-center space-x-1 px-5 py-3 bg-gray-700 rounded-full text-gray-200 cursor-default 
-                       hover:bg-[#00ADB5] hover:text-white transition duration-300 ease-in-out shadow-md"
-            title={name}
+      <h2 className="text-3xl font-bold mb-6 text-center text-white">
+        Skills & Certifications
+      </h2>
+
+      {/* Skills */}
+      <div className="mb-12">
+        <h3 className="text-xl font-semibold text-[#00ADB5] mb-4 text-center">
+          Technical Skills
+        </h3>
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          {[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js",
+            "Node.js",
+            "Tailwind CSS",
+            "MongoDB",
+            "Git & GitHub",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="px-4 py-2 bg-[#2C2C2C] rounded-full text-gray-200 hover:bg-[#00ADB5] hover:text-white transition"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Certifications */}
+      <div>
+        <h3 className="text-xl font-semibold text-[#00ADB5] mb-8 text-center">
+          Certifications
+        </h3>
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* Oracle Certificate */}
+          <a
+            href="/certificates/oracle.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C2C2C] rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 p-6 flex flex-col items-center text-center"
           >
-            {icon}
-            <span>{name}</span>
-          </span>
-        ))}
+            <SiOracle className="text-orange-500 text-5xl mb-3" />
+            <strong className="text-white block">
+              Oracle Cloud Infrastructure
+            </strong>
+            <p className="text-sm text-gray-400">AI Foundations Associate</p>
+          </a>
+
+          {/* TechnoHacks Internship */}
+          <a
+            href="/certificates/technohacks.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C2C2C] rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 p-6 flex flex-col items-center text-center"
+          >
+            <FaLaptopCode className="text-blue-400 text-5xl mb-3" />
+            <strong className="text-white block">
+              Web Development Internship
+            </strong>
+            <p className="text-sm text-gray-400">TechnoHacks EduTech</p>
+          </a>
+
+          {/* GUVI Workshop */}
+          <a
+            href="/certificates/guvi.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C2C2C] rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 p-6 flex flex-col items-center text-center"
+          >
+            <SiGoogleclassroom className="text-green-400 text-5xl mb-3" />
+            <strong className="text-white block">Fullstack Workshop</strong>
+            <p className="text-sm text-gray-400">GUVI • 2024</p>
+          </a>
+        </div>
       </div>
     </section>
   );

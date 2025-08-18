@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className="flex space-x-6 mb-8 text-[#00ADB5] text-3xl">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/Nandhusri05"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"

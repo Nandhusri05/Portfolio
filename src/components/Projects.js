@@ -17,23 +17,23 @@ const projects = [
     title: "EduWeb",
     category: "Web Development",
     description:
-      "An online learning platform built with React and TailwindCSS. It provides courses, responsive UI, and smooth navigation for a better learning experience.",
+      "An online learning platform built with React and TailwindCSS. It provides engaging courses, a responsive UI, and smooth navigation for an enhanced learning experience.",
     tech: ["React", "TailwindCSS"],
     link: "https://github.com/Nandhusri05/EduWeb.git",
   },
   {
-    title: "E-commerce App",
-    category: "Full Stack Application",
+    title: "Portfolio Website",
+    category: "Personal Project",
     description:
-      "A full-stack online store with product listing, shopping cart, and checkout functionality using MERN stack.",
-    tech: ["MERN Stack", "MongoDB"],
-    link: "https://github.com/yourusername/ecommerce-app",
+      "A responsive portfolio website designed and developed to showcase my skills, projects, and achievements. Built with React, TailwindCSS, and Framer Motion for modern animations and a clean design.",
+    tech: ["React", "TailwindCSS"],
+    link: "https://github.com/Nandhusri05/Portfolio.git",
   },
   {
     title: "HomeVerse",
     category: "API Integration",
     description:
-      "A real estate website with property listings, filtering, and API-based data fetching. Built using React with smooth UI and animations.",
+      "A real estate platform with property listings, advanced filtering, and API-based data fetching. Developed using React with a smooth, interactive UI and animations for a modern browsing experience.",
     tech: ["React", "API"],
     link: "https://github.com/Nandhusri05/HomeVerse.git",
   },
